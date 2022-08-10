@@ -52,7 +52,7 @@ def main(folder_input = 'out/ko'):
         model_name_or_path = '/home/huguetcabot/sentence_transformers/test-glue/XNLI'
         # model_name_or_path = '/home/huguetcabot/sentence_transformers/test-glue/run-1/checkpoint-3910'
     else:
-        model_name_or_path = 'joeddav/xlm-roberta-large-xnli'
+        model_name_or_path = 'MoritzLaurer/mDeBERTa-v3-base-mnli-xnli'
 
     tokenizer = transformers.AutoTokenizer.from_pretrained(
             model_name_or_path)
