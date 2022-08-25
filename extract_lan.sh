@@ -11,7 +11,7 @@ wikimapper download $1wiki-latest --dir data/$1/
 echo "Create wikidata database"
 wikimapper create $1wiki-latest --dumpdir data/$1/ --target data/$1/index_$1wiki-latest.db
 echo "Extract abstracts"
-python -m wikiextractor.wikiextractor.WikiExtractor data/$1/$1wiki-latest-pages-articles-multistream.xml.bz2 --links --language $1 --output text/$1 --templates data/$1/templates.txt
+python -m wikiextractor.WikiExtractor data/$1/$1wiki-latest-pages-articles-multistream.xml.bz2 --links --language $1 --output text/$1 --templates data/$1/templates.txt
 echo "Fix first and last file: "
 echo `ls -1 text/$1/**/* | tail -1`
 echo "</data>" >> `ls -1 text/$1/**/* | tail -1`
