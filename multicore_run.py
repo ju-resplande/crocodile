@@ -9,7 +9,7 @@ import argparse
 from timeit import default_timer
 
 __START_DOC__ = 0   #start reading from document number
-__CORES__ = 7
+__CORES__ = 12
 
 parser = argparse.ArgumentParser(prog=os.path.basename(sys.argv[0]),
                                     formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -48,6 +48,8 @@ elif args.language == 'es' or args.language == 'ca':
     spacy_model = 'es_core_news_sm'
 elif args.language == 'it':
     spacy_model = 'it_core_news_sm'
+elif args.language == 'pt':
+    spacy_model = 'pt_core_news_sm'
 else:
     spacy_model = 'xx_ent_wiki_sm'
 
