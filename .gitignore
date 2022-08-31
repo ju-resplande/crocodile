@@ -3,3 +3,4 @@ text
 out
 __pycache__
 wikidata
+out_clean/*.jsonl
